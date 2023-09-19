@@ -1,0 +1,10 @@
+export * as analytics from "./analytics";
+export * as behat from "./behat";
+export * as dataprivacy from "./dataprivacy";
+export * as lp from "./lp";
+export * as mobile from "./mobile";
+export * as moodlenet from "./moodlenet";
+export * as policy from "./policy";
+export * as templatelibrary from "./templatelibrary";
+export * as usertours from "./usertours";
+export * as xmldb from "./xmldb";

@@ -1,0 +1,10 @@
+export * as edit_page from "./edit_page";
+export * as get_page_contents from "./get_page_contents";
+export * as get_page_for_editing from "./get_page_for_editing";
+export * as get_subwiki_files from "./get_subwiki_files";
+export * as get_subwiki_pages from "./get_subwiki_pages";
+export * as get_subwikis from "./get_subwikis";
+export * as get_wikis_by_courses from "./get_wikis_by_courses";
+export * as new_page from "./new_page";
+export * as view_page from "./view_page";
+export * as view_wiki from "./view_wiki";

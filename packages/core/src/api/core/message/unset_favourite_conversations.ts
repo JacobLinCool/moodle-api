@@ -1,0 +1,26 @@
+export type ParamsConversations = (number | null)[];
+
+export interface Params {
+	/** id of the user, 0 for current user */
+	userid?: number | null;
+	conversations: ParamsConversations;
+}
+
+/**
+ * warning
+ */
+export interface ReturnsItem {
+	/** item */
+	item: string | null;
+	/** item id */
+	itemid: number | null;
+	/** the warning code can be used by the client app to implement specific behaviour */
+	warningcode: string | null;
+	/** untranslated english message to explain the warning */
+	message: string | null;
+}
+
+/**
+ * list of warnings
+ */
+export type Returns = ReturnsItem[];

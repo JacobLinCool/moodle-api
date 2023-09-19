@@ -1,0 +1,39 @@
+{
+	"name": "moodle-api",
+	"description": "Moodle API",
+	"version": "0.0.0",
+	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
+	"license": "AGPL-3.0",
+	"keywords": [
+		"moodle",
+		"type",
+		"api",
+		"webservices"
+	],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"build:docs": "typedoc --out docs src"
+	},
+	"dependencies": {
+		"cross-fetch": "^4.0.0"
+	},
+	"devDependencies": {
+		"dotenv": "^16.3.1",
+		"tsup": "^7.2.0",
+		"typedoc": "^0.25.1",
+		"typescript": "^5.2.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JacobLinCool/moodle-api.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JacobLinCool/moodle-api/issues"
+	},
+	"homepage": "https://jacoblincool.github.io/moodle-api"
+}

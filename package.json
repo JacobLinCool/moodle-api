@@ -1,0 +1,43 @@
+{
+	"private": true,
+	"name": "moodle-api-monorepo",
+	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
+	"license": "AGPL-3.0",
+	"scripts": {
+		"prepare": "husky install",
+		"format": "prettier --write --ignore-path .gitignore **/*.{ts,json,yaml,yml}",
+		"test": "vitest",
+		"changeset": "changeset",
+		"build:docs": "typedoc --out docs"
+	},
+	"devDependencies": {
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.2",
+		"@types/node": "^20.6.2",
+		"dotenv": "^16.3.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.1",
+		"prettier": "^3.0.3",
+		"prettier-plugin-organize-imports": "^3.2.3",
+		"serve": "^14.2.1",
+		"tsup": "^7.2.0",
+		"tsx": "^3.12.10",
+		"typedoc": "^0.25.1",
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.4"
+	},
+	"lint-staged": {
+		"*.{ts,js,json,yaml,yml}": [
+			"prettier --write"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JacobLinCool/moodle-api.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JacobLinCool/moodle-api/issues"
+	},
+	"homepage": "https://jacoblincool.github.io/moodle-api",
+	"packageManager": "pnpm@8.7.6"
+}

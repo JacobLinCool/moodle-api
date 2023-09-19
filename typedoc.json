@@ -1,0 +1,6 @@
+{
+	"entryPoints": ["packages/*"],
+	"name": "Moodle API",
+	"entryPointStrategy": "packages",
+	"includeVersion": true
+}
