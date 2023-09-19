@@ -4,6 +4,8 @@ The easiest way to use the Moodle API with fully typed parameters and responses.
 
 ## Example
 
+![Auto Completion](https://raw.githubusercontent.com/JacobLinCool/moodle-api/main/images/auto-completion.gif)
+
 ```ts
 import { MoodleClient, login } from "moodle-api";
 
