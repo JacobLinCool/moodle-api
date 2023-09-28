@@ -1,6 +1,6 @@
 {
 	"name": "moodle-api",
-	"description": "Moodle API",
+	"description": "The easiest way to use the Moodle API with fully typed parameters and responses.",
 	"version": "0.1.0",
 	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
 	"license": "AGPL-3.0",
