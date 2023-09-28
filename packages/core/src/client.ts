@@ -1,5 +1,6 @@
 import fetch from "cross-fetch";
 import { FunctionDefinition } from "./api";
+import { flatten } from "./utils";
 
 /**
  * Represents a client for making requests to the Moodle API.
@@ -38,9 +39,10 @@ export class MoodleClient {
 		url.searchParams.append("wstoken", this.token);
 		url.searchParams.append("moodlewsrestformat", "json");
 
+		const flattened = flatten(params[0]);
 		const body = new URLSearchParams();
 		if (params[0]) {
-			for (const [key, value] of Object.entries(params[0])) {
+			for (const [key, value] of Object.entries(flattened)) {
 				body.append(key, value);
 			}
 		}
