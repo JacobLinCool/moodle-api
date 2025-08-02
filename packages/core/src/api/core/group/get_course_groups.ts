@@ -12,7 +12,7 @@ export interface ReturnsItem {
 	name: string | null;
 	/** group description text */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** group enrol secret phrase */
 	enrolmentkey: string | null;

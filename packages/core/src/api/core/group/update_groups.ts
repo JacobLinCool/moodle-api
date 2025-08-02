@@ -1,3 +1,15 @@
+export interface ParamsGroupsItemCustomfieldsItem {
+	/** The shortname of the custom field */
+	shortname: string | null;
+	/** The value of the custom field */
+	value: string | null;
+}
+
+/**
+ * Custom fields
+ */
+export type ParamsGroupsItemCustomfields = ParamsGroupsItemCustomfieldsItem[];
+
 export interface ParamsGroupsItem {
 	/** ID of the group */
 	id: number | null;
@@ -5,7 +17,7 @@ export interface ParamsGroupsItem {
 	name: string | null;
 	/** group description text */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** group enrol secret phrase */
 	enrolmentkey: string | null;
@@ -15,6 +27,8 @@ export interface ParamsGroupsItem {
 	visibility: string | null;
 	/** activity participation enabled? Only for "all" and "members" visibility */
 	participation: boolean | null;
+	/** Custom fields */
+	customfields: ParamsGroupsItemCustomfields;
 }
 
 /**

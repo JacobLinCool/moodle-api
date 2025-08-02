@@ -5,6 +5,23 @@ export interface Params {
 	page?: number | null;
 }
 
+/**
+ * The grade for each grade item.
+ */
+export interface ReturnsAttemptGradeitemmarksItem {
+	/** The name of this grade item. */
+	name: string | null;
+	/** The grade this attempt earned for this item. */
+	grade: number | null;
+	/** The total this grade is out of. */
+	maxgrade: number | null;
+}
+
+/**
+ * If the quiz has additional grades set up, the mark for each grade for this attempt.
+ */
+export type ReturnsAttemptGradeitemmarks = ReturnsAttemptGradeitemmarksItem[];
+
 export interface ReturnsAttempt {
 	/** Attempt id. */
 	id: number | null;
@@ -36,6 +53,8 @@ export interface ReturnsAttempt {
 	timecheckstate: number | null;
 	/** Total marks for this attempt. */
 	sumgrades: number | null;
+	/** If the quiz has additional grades set up, the mark for each grade for this attempt. */
+	gradeitemmarks: ReturnsAttemptGradeitemmarks;
 	/** Time when the student was notified that manual grading of their attempt was complete. */
 	gradednotificationsenttime: number | null;
 }
@@ -71,6 +90,8 @@ export interface ReturnsQuestionsItemResponsefileareasItemFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -117,9 +138,11 @@ export interface ReturnsQuestionsItem {
 	hasautosavedstep: boolean | null;
 	/** whether the question is flagged or not */
 	flagged: boolean | null;
-	/** the state where the question is in. It will not be returned if the user cannot see it due to the quiz display correctness settings. */
+	/** the state where the question is in terms of correctness. It will not be returned if the user cannot see it due to the quiz display correctness settings. */
 	state: string | null;
-	/** current formatted state of the question */
+	/** A machine-readable class name for the state that this question attempt is in, as returned by question_usage_by_activity::get_question_state_class(). Always returned. */
+	stateclass: string | null;
+	/** Human readable state of the question. */
 	status: string | null;
 	/** whether the question is blocked by the previous question */
 	blockedbyprevious: boolean | null;

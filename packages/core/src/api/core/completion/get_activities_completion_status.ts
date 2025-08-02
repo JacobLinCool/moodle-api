@@ -53,6 +53,8 @@ export interface ReturnsStatusesItem {
 	uservisible: boolean | null;
 	/** Completion status details */
 	details?: ReturnsStatusesItemDetails;
+	/** Whether the overall completion state of this course module should be marked as complete or not. */
+	isoverallcomplete: boolean | null;
 }
 
 /**

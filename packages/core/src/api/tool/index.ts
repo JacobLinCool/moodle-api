@@ -1,3 +1,4 @@
+export * as admin from "./admin";
 export * as analytics from "./analytics";
 export * as behat from "./behat";
 export * as dataprivacy from "./dataprivacy";

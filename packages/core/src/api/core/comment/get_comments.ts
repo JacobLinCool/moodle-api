@@ -23,7 +23,7 @@ export interface ReturnsCommentsItem {
 	id: number | null;
 	/** The content text formatted */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 	/** Time created (timestamp) */
 	timecreated: number | null;

@@ -13,7 +13,7 @@ export interface ReturnsProfilefieldsItem {
 	datatype: string | null;
 	/** Profield field description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** Profield field category id */
 	categoryid: number | null;
@@ -33,7 +33,7 @@ export interface ReturnsProfilefieldsItem {
 	signup: number | null;
 	/** Profield field default data */
 	defaultdata: string | null;
-	/** defaultdata format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** defaultdata format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	defaultdataformat: number | null;
 	/** Profield field settings */
 	param1: string | null;
@@ -83,6 +83,8 @@ export interface Returns {
 	defaultcity: string | null;
 	/** Default country */
 	country: string | null;
+	/** Extended characters in usernames or not */
+	extendedusernamechars: boolean | null;
 	/** Required profile fields */
 	profilefields: ReturnsProfilefields;
 	/** Recaptcha public key */

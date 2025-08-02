@@ -242,7 +242,7 @@ export interface ReturnsDiscussionsItemPostsUserpostsItem {
 	replysubject: string;
 	/** message */
 	message: string;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat: number | null;
 	author: ReturnsDiscussionsItemPostsUserpostsItemAuthor;
 	/** discussionid */
@@ -513,7 +513,7 @@ export interface ReturnsDiscussionsItemPostsParentpostsItem {
 	replysubject: string;
 	/** message */
 	message: string;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat: number | null;
 	author: ReturnsDiscussionsItemPostsParentpostsItemAuthor;
 	/** discussionid */

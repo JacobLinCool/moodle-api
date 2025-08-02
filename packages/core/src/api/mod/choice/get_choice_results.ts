@@ -1,6 +1,8 @@
 export interface Params {
 	/** choice instance id */
 	choiceid: number | null;
+	/** Group ID. 0 for all participants, empty for active group. */
+	groupid?: number | null;
 }
 
 /**

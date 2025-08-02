@@ -37,6 +37,8 @@ export interface ReturnsQuestionsItemResponsefileareasItemFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -83,9 +85,11 @@ export interface ReturnsQuestionsItem {
 	hasautosavedstep: boolean | null;
 	/** whether the question is flagged or not */
 	flagged: boolean | null;
-	/** the state where the question is in. It will not be returned if the user cannot see it due to the quiz display correctness settings. */
+	/** the state where the question is in terms of correctness. It will not be returned if the user cannot see it due to the quiz display correctness settings. */
 	state: string | null;
-	/** current formatted state of the question */
+	/** A machine-readable class name for the state that this question attempt is in, as returned by question_usage_by_activity::get_question_state_class(). Always returned. */
+	stateclass: string | null;
+	/** Human readable state of the question. */
 	status: string | null;
 	/** whether the question is blocked by the previous question */
 	blockedbyprevious: boolean | null;
@@ -120,6 +124,8 @@ export type ReturnsWarnings = ReturnsWarningsItem[];
 
 export interface Returns {
 	questions: ReturnsQuestions;
+	/** Total unanswered questions. */
+	totalunanswered: number | null;
 	/** list of warnings */
 	warnings: ReturnsWarnings;
 }

@@ -62,10 +62,14 @@ export interface ReturnsItemsItem {
 	template: number;
 	/** The item name. */
 	name: string;
+	/** name format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
+	nameformat?: number | null;
 	/** The item label. */
 	label: string;
 	/** The text describing the item or the available possible answers. */
 	presentation: string;
+	/** presentation format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
+	presentationformat?: number | null;
 	/** The type of the item. */
 	typ: string;
 	/** Whether it has a value or not. */

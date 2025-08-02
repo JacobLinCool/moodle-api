@@ -25,7 +25,7 @@ export interface ParamsGradesItemAdvancedgradingdataGuideCriteriaItemFillingsIte
 	levelid: number | null;
 	/** remark */
 	remark: string | null;
-	/** remark format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** remark format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	remarkformat: number | null;
 	/** maximum score */
 	score: number | null;
@@ -61,7 +61,7 @@ export interface ParamsGradesItemAdvancedgradingdataRubricCriteriaItemFillingsIt
 	levelid: number | null;
 	/** remark */
 	remark: string | null;
-	/** remark format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** remark format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	remarkformat: number | null;
 }
 

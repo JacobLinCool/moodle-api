@@ -6,7 +6,7 @@ export interface ParamsEventsItem {
 	name: string;
 	/** Description */
 	description?: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format?: number | null;
 	/** course id */
 	courseid?: number;
@@ -42,7 +42,7 @@ export interface ReturnsEventsItem {
 	name: string | null;
 	/** Description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 	/** course id */
 	courseid: number | null;

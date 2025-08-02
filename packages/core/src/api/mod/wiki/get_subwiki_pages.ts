@@ -42,6 +42,8 @@ export interface ReturnsPagesItemTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**
@@ -77,7 +79,7 @@ export interface ReturnsPagesItem {
 	firstpage: boolean | null;
 	/** Page contents. */
 	cachedcontent: string | null;
-	/** cachedcontent format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** cachedcontent format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentformat: number | null;
 	/** Size of page contents in bytes (doesn't include size of attached files). */
 	contentsize: number | null;

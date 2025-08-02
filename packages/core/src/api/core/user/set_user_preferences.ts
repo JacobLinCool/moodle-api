@@ -3,8 +3,8 @@ export interface ParamsPreferencesItem {
 	name: string | null;
 	/** The value of the preference */
 	value: string | null;
-	/** Id of the user to set the preference */
-	userid: number | null;
+	/** Id of the user to set the preference (default to current user) */
+	userid?: number | null;
 }
 
 export type ParamsPreferences = ParamsPreferencesItem[];

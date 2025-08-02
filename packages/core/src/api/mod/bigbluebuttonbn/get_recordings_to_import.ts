@@ -23,6 +23,8 @@ export interface ReturnsTabledataColumnsItem {
 	sortable: boolean | null;
 	/** Whether this column contains HTML */
 	allowHTML: boolean | null;
+	/** Formatter name */
+	formatter: string | null;
 }
 
 export type ReturnsTabledataColumns = ReturnsTabledataColumnsItem[];

@@ -11,4 +11,5 @@ export * as get_responses_analysis from "./get_responses_analysis";
 export * as get_unfinished_responses from "./get_unfinished_responses";
 export * as launch_feedback from "./launch_feedback";
 export * as process_page from "./process_page";
+export * as questions_reorder from "./questions_reorder";
 export * as view_feedback from "./view_feedback";

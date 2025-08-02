@@ -64,8 +64,8 @@ export interface ReturnsEventsItemCourse {
 	idnumber: string;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
-	summaryformat: number | null;
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
+	summaryformat?: number | null;
 	/** startdate */
 	startdate: number;
 	/** enddate */
@@ -129,7 +129,7 @@ export interface ReturnsEventsItem {
 	name: string;
 	/** description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** location */
 	location: string | null;
@@ -202,6 +202,8 @@ export interface ReturnsEventsItem {
 	action: ReturnsEventsItemAction;
 	/** purpose */
 	purpose: string;
+	/** branded */
+	branded: boolean;
 	/** url */
 	url: string;
 }

@@ -24,6 +24,8 @@ export interface ReturnsPageTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**
@@ -49,7 +51,7 @@ export interface ReturnsPage {
 	title: string | null;
 	/** Page contents. */
 	cachedcontent: string | null;
-	/** cachedcontent format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** cachedcontent format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentformat: number | null;
 	/** True if user can edit the page. */
 	caneditpage: boolean | null;

@@ -110,4 +110,6 @@ export interface Returns {
 	tool_mobile_qrcodetype: number | null;
 	/** list of warnings */
 	warnings: ReturnsWarnings;
+	/** Display default login form. */
+	showloginform: number | null;
 }

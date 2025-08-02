@@ -238,7 +238,7 @@ export interface ReturnsPostsItem {
 	replysubject: string;
 	/** message */
 	message: string;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat: number | null;
 	author: ReturnsPostsItemAuthor;
 	/** discussionid */

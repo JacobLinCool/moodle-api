@@ -61,6 +61,8 @@ export interface ReturnsCoursesItemAssignmentsItemIntrofilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -89,6 +91,8 @@ export interface ReturnsCoursesItemAssignmentsItemIntroattachmentsItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -117,6 +121,8 @@ export interface ReturnsCoursesItemAssignmentsItemActivityattachmentsItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -153,6 +159,8 @@ export interface ReturnsCoursesItemAssignmentsItem {
 	allowsubmissionsfromdate: number | null;
 	/** grade type */
 	grade: number | null;
+	/** if enabled, penalty will be applied to late submissions */
+	gradepenalty: number | null;
 	/** last time assignment was modified */
 	timemodified: number | null;
 	/** if enabled, set activity as complete following submission */
@@ -181,19 +189,21 @@ export interface ReturnsCoursesItemAssignmentsItem {
 	markingworkflow: number | null;
 	/** enable marking allocation */
 	markingallocation: number | null;
+	/** enable marking anonymous */
+	markinganonymous: number | null;
 	/** student must accept submission statement */
 	requiresubmissionstatement: number | null;
 	/** Prevent submission not in group */
 	preventsubmissionnotingroup: number | null;
 	/** Submission statement formatted. */
 	submissionstatement: string | null;
-	/** submissionstatement format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** submissionstatement format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	submissionstatementformat: number | null;
 	/** configuration settings */
 	configs: ReturnsCoursesItemAssignmentsItemConfigs;
 	/** assignment intro, not allways returned because it deppends on the activity configuration */
 	intro: string | null;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat: number | null;
 	/** Files in the introduction text */
 	introfiles: ReturnsCoursesItemAssignmentsItemIntrofiles;
@@ -201,7 +211,7 @@ export interface ReturnsCoursesItemAssignmentsItem {
 	introattachments: ReturnsCoursesItemAssignmentsItemIntroattachments;
 	/** Description of activity */
 	activity: string | null;
-	/** activity format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** activity format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	activityformat: number | null;
 	/** Files from activity field */
 	activityattachments: ReturnsCoursesItemAssignmentsItemActivityattachments;

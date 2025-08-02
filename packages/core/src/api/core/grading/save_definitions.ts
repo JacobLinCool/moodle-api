@@ -5,13 +5,13 @@ export interface ParamsAreasItemDefinitionsItemGuideGuideCriteriaItem {
 	sortorder: number | null;
 	/** description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** description */
 	shortname: string | null;
 	/** markers description */
 	descriptionmarkers: string | null;
-	/** descriptionmarkers format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** descriptionmarkers format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionmarkersformat: number | null;
 	/** maximum score */
 	maxscore: number | null;
@@ -27,7 +27,7 @@ export interface ParamsAreasItemDefinitionsItemGuideGuideCommentsItem {
 	sortorder: number | null;
 	/** description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 }
 
@@ -53,7 +53,7 @@ export interface ParamsAreasItemDefinitionsItemRubricRubricCriteriaItemLevelsIte
 	score: number | null;
 	/** definition */
 	definition: string | null;
-	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	definitionformat: number | null;
 }
 
@@ -70,7 +70,7 @@ export interface ParamsAreasItemDefinitionsItemRubricRubricCriteriaItem {
 	sortorder: number | null;
 	/** description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** levels */
 	levels: ParamsAreasItemDefinitionsItemRubricRubricCriteriaItemLevels;
@@ -99,7 +99,7 @@ export interface ParamsAreasItemDefinitionsItem {
 	name: string | null;
 	/** description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** status */
 	status: number | null;

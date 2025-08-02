@@ -35,7 +35,7 @@ export interface ReturnsAnswerpagesItemPage {
 	title: string | null;
 	/** The contents of this page */
 	contents: string | null;
-	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentsformat: number | null;
 	/** Toggles display in the left menu block */
 	displayinmenublock: boolean | null;
@@ -62,7 +62,7 @@ export interface ReturnsAnswerpagesItemAnswerdata {
 	score: string | null;
 	/** The response text. */
 	response: string | null;
-	/** response. format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** response. format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	responseformat: number | null;
 	/** User answers */
 	answers: ReturnsAnswerpagesItemAnswerdataAnswers;

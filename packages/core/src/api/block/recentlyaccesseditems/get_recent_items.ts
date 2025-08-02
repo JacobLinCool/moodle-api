@@ -28,6 +28,8 @@ export interface ReturnsItem {
 	icon: string;
 	/** purpose */
 	purpose: string;
+	/** branded */
+	branded: boolean;
 }
 
 /**

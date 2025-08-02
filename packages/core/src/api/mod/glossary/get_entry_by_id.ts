@@ -23,6 +23,8 @@ export interface ReturnsEntryDefinitioninlinefilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -50,6 +52,8 @@ export interface ReturnsEntryAttachmentsItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -78,6 +82,8 @@ export interface ReturnsEntryTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**
@@ -100,7 +106,7 @@ export interface ReturnsEntry {
 	concept: string | null;
 	/** The definition */
 	definition: string | null;
-	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	definitionformat: number | null;
 	/** The definition trust flag */
 	definitiontrust: boolean | null;

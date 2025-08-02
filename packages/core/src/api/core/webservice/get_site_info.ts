@@ -76,6 +76,8 @@ export interface Returns {
 	usermaxuploadfilesize: number | null;
 	/** the default home page for the user: 0 for the site home, 1 for dashboard */
 	userhomepage: number | null;
+	/** The URL of default home page when userhomepage is 4 (HOMEPAGE_URL). */
+	userhomepageurl: string | null;
 	/** Private user access key for fetching files. */
 	userprivateaccesskey: string | null;
 	/** Site course ID */
@@ -92,4 +94,6 @@ export interface Returns {
 	limitconcurrentlogins: number | null;
 	/** Number of active sessions for current user. Only returned when limitconcurrentlogins is used. */
 	usersessionscount: number | null;
+	/** Whether user accepted all the policies. */
+	policyagreed: number | null;
 }

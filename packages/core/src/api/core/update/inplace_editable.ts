@@ -9,6 +9,9 @@ export interface Params {
 	value: string | null;
 }
 
+/**
+ * Edit icon
+ */
 export interface ReturnsEditicon {
 	/** Edit icon key */
 	key: string | null;
@@ -33,6 +36,7 @@ export interface Returns {
 	edithint: string | null;
 	/** label for editing element */
 	editlabel: string | null;
+	/** Edit icon */
 	editicon: ReturnsEditicon;
 	/** type of the element (text, toggle, select) */
 	type: string | null;

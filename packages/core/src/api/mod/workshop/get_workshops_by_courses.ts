@@ -25,6 +25,8 @@ export interface ReturnsWorkshopsItemIntrofilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -49,6 +51,8 @@ export interface ReturnsWorkshopsItemInstructauthorsfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -74,6 +78,8 @@ export interface ReturnsWorkshopsItemInstructreviewersfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -99,6 +105,8 @@ export interface ReturnsWorkshopsItemConclusionfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -115,17 +123,17 @@ export interface ReturnsWorkshopsItem {
 	name: string;
 	/** Workshop introduction text. */
 	intro: string | null;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat?: number | null;
 	/** Forced activity language */
 	lang: string | null;
 	/** Instructions for the submission phase. */
 	instructauthors: string | null;
-	/** instructauthors format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** instructauthors format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	instructauthorsformat?: number | null;
 	/** Instructions for the assessment phase. */
 	instructreviewers: string | null;
-	/** instructreviewers format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** instructreviewers format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	instructreviewersformat?: number | null;
 	/** The timestamp when the module was modified. */
 	timemodified: number;
@@ -173,7 +181,7 @@ export interface ReturnsWorkshopsItem {
 	phaseswitchassessment: boolean;
 	/** A text to be displayed at the end of the workshop. */
 	conclusion: string | null;
-	/** conclusion format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** conclusion format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	conclusionformat?: number | null;
 	/** Mode of the overall feedback support. */
 	overallfeedbackmode: number;

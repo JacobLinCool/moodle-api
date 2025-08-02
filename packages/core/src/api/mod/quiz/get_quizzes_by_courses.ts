@@ -28,6 +28,8 @@ export interface ReturnsQuizzesItemIntrofilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -46,7 +48,7 @@ export interface ReturnsQuizzesItem {
 	name: string | null;
 	/** Activity introduction */
 	intro: string | null;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat: number | null;
 	/** Files in the introduction */
 	introfiles: ReturnsQuizzesItemIntrofiles;
@@ -86,8 +88,10 @@ export interface ReturnsQuizzesItem {
 	questiondecimalpoints: number | null;
 	/** Whether users are allowed to review their quiz attempts at various times. This is a bit field, decoded by the \mod_quiz\question\display_options class. It is formed by ORing together the constants defined there. */
 	reviewattempt: number | null;
-	/** Whether users are allowed to review their quiz attempts at various times. A bit field, like reviewattempt. */
+	/** Whether users are allowed to review their quiz attempts at various times.A bit field, like reviewattempt. */
 	reviewcorrectness: number | null;
+	/** Whether users are allowed to review their quiz attempts at various times. A bit field, like reviewattempt. */
+	reviewmaxmarks: number | null;
 	/** Whether users are allowed to review their quiz attempts at various times. A bit field, like reviewattempt. */
 	reviewmarks: number | null;
 	/** Whether users are allowed to review their quiz attempts at various times. A bit field, like reviewattempt. */
@@ -138,6 +142,8 @@ export interface ReturnsQuizzesItem {
 	hasfeedback: number | null;
 	/** Whether the quiz has questions */
 	hasquestions: number | null;
+	/** Whether attempt pre-creation is enabled */
+	precreateattempts: number | null;
 }
 
 export type ReturnsQuizzes = ReturnsQuizzesItem[];

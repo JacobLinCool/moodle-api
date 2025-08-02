@@ -17,7 +17,7 @@ export interface Params {
 	concept: string | null;
 	/** Glossary concept definition */
 	definition: string | null;
-	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** definition format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	definitionformat: number | null;
 	/** Optional settings */
 	options?: ParamsOptions;

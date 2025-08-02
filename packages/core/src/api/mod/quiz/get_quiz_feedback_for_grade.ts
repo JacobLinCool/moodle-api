@@ -25,6 +25,8 @@ export interface ReturnsFeedbackinlinefilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -54,7 +56,7 @@ export type ReturnsWarnings = ReturnsWarningsItem[];
 export interface Returns {
 	/** the comment that corresponds to this grade (empty for none) */
 	feedbacktext: string | null;
-	/** feedbacktext format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** feedbacktext format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	feedbacktextformat: number | null;
 	/** feedback inline files */
 	feedbackinlinefiles: ReturnsFeedbackinlinefiles;

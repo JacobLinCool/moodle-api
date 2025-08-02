@@ -67,7 +67,7 @@ export interface ReturnsItem {
 	idnumber: string | null;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	summaryformat: number | null;
 	/** course format: weeks, topics, social, site,.. */
 	format: string | null;

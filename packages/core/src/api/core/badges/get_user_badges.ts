@@ -101,6 +101,8 @@ export interface ReturnsBadgesItem {
 	type: number;
 	/** Course id */
 	courseid: number | null;
+	/** Full name of the course */
+	coursefullname: string;
 	/** Message */
 	message: string;
 	/** Message subject */
@@ -123,18 +125,16 @@ export interface ReturnsBadgesItem {
 	dateexpire: number | null;
 	/** Visible */
 	visible: number;
+	/** Id of the awarded user */
+	recipientid: number;
+	/** Full name of the awarded user */
+	recipientfullname: string;
 	/** User email */
 	email: string;
 	/** Version */
 	version: string | null;
 	/** Language */
 	language: string | null;
-	/** Name of the image author */
-	imageauthorname: string | null;
-	/** Email of the image author */
-	imageauthoremail: string | null;
-	/** URL of the image author */
-	imageauthorurl: string | null;
 	/** Caption of the image */
 	imagecaption: string | null;
 	/** Badge URL */

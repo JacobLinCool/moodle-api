@@ -22,6 +22,8 @@ export interface ReturnsLessonIntrofilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -46,6 +48,8 @@ export interface ReturnsLessonMediafilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -64,7 +68,7 @@ export interface ReturnsLesson {
 	name: string;
 	/** Lesson introduction text. */
 	intro: string;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat?: number | null;
 	/** Forced activity language */
 	lang: string | null;

@@ -74,7 +74,7 @@ export interface ReturnsPlanTemplate {
 	shortname: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** duedate */
 	duedate: number;
@@ -111,7 +111,7 @@ export interface ReturnsPlan {
 	name: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** userid */
 	userid: number;
@@ -189,7 +189,7 @@ export interface ReturnsCompetenciesItemCompetency {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;

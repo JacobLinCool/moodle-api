@@ -25,6 +25,8 @@ export interface ReturnsBlocksItemContentsFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -40,7 +42,7 @@ export interface ReturnsBlocksItemContents {
 	title: string | null;
 	/** Block contents. */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentformat: number | null;
 	/** Block footer. */
 	footer: string | null;

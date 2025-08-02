@@ -25,6 +25,8 @@ export interface ReturnsFeedbacksItemIntrofilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -49,6 +51,8 @@ export interface ReturnsFeedbacksItemPageaftersubmitfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -66,7 +70,7 @@ export interface ReturnsFeedbacksItem {
 	name: string;
 	/** Feedback introduction text. */
 	intro: string;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat?: number | null;
 	/** Forced activity language */
 	lang: string | null;
@@ -82,7 +86,7 @@ export interface ReturnsFeedbacksItem {
 	site_after_submit: string;
 	/** Text to display after submission. */
 	page_after_submit: string;
-	/** page_after_submit format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** page_after_submit format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	page_after_submitformat?: number | null;
 	/** Whether stats should be published. */
 	publish_stats: boolean;

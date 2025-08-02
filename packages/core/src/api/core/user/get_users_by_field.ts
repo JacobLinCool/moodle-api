@@ -83,9 +83,11 @@ export interface ReturnsItem {
 	timezone: string | null;
 	/** Mail format code is 0 for plain text, 1 for HTML etc */
 	mailformat: number | null;
+	/** Whether the user is tracking forums. */
+	trackforums: number | null;
 	/** User profile description */
 	description: string | null;
-	/** int format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** int format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** Home city of the user */
 	city: string | null;

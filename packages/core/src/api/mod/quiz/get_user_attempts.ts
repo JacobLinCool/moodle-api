@@ -9,6 +9,23 @@ export interface Params {
 	includepreviews?: boolean | null;
 }
 
+/**
+ * The grade for each grade item.
+ */
+export interface ReturnsAttemptsItemGradeitemmarksItem {
+	/** The name of this grade item. */
+	name: string | null;
+	/** The grade this attempt earned for this item. */
+	grade: number | null;
+	/** The total this grade is out of. */
+	maxgrade: number | null;
+}
+
+/**
+ * If the quiz has additional grades set up, the mark for each grade for this attempt.
+ */
+export type ReturnsAttemptsItemGradeitemmarks = ReturnsAttemptsItemGradeitemmarksItem[];
+
 export interface ReturnsAttemptsItem {
 	/** Attempt id. */
 	id: number | null;
@@ -26,7 +43,7 @@ export interface ReturnsAttemptsItem {
 	currentpage: number | null;
 	/** Whether is a preview attempt or not. */
 	preview: number | null;
-	/** The current state of the attempts. 'inprogress', 'overdue', 'finished' or 'abandoned'. */
+	/** The current state of the attempts. 'inprogress', 'overdue', 'finished' or 'abandoned'. For backwards compatibility, attempts in 'submitted' state will return 'finished' and attempts in 'notstarted' state will return 'inprogress'. To get attempts with all real states, call get_user_quiz_attempts() instead. */
 	state: string | null;
 	/** Time when the attempt was started. */
 	timestart: number | null;
@@ -40,6 +57,8 @@ export interface ReturnsAttemptsItem {
 	timecheckstate: number | null;
 	/** Total marks for this attempt. */
 	sumgrades: number | null;
+	/** If the quiz has additional grades set up, the mark for each grade for this attempt. */
+	gradeitemmarks: ReturnsAttemptsItemGradeitemmarks;
 	/** Time when the student was notified that manual grading of their attempt was complete. */
 	gradednotificationsenttime: number | null;
 }

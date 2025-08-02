@@ -77,7 +77,7 @@ export interface ReturnsUsergradesItemGradeitemsItem {
 	averageformatted: string | null;
 	/** Grade feedback */
 	feedback: string | null;
-	/** feedback format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** feedback format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	feedbackformat: number | null;
 }
 

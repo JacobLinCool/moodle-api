@@ -95,4 +95,6 @@ export interface Returns {
 	cancantogglefavourite: boolean | null;
 	/** Whether the user has the capability mod/forum:grade allowed. */
 	cangrade: boolean | null;
+	/** Whether the user has the capability mod/forum:canmailnow allowed. */
+	cancanmailnow: boolean | null;
 }

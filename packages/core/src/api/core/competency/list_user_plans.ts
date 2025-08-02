@@ -74,7 +74,7 @@ export interface ReturnsItemTemplate {
 	shortname: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** duedate */
 	duedate: number;
@@ -111,7 +111,7 @@ export interface ReturnsItem {
 	name: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** userid */
 	userid: number;

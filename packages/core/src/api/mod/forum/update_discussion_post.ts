@@ -17,7 +17,7 @@ export interface Params {
 	subject?: string | null;
 	/** Updated post message (HTML assumed if messageformat is not provided) */
 	message?: string | null;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat?: number | null;
 	/** Configuration options for the post. */
 	options?: ParamsOptions;

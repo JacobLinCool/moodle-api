@@ -23,7 +23,7 @@ export interface ReturnsTagsItem {
 	rawname: string | null;
 	/** tag description */
 	description: string | null;
-	/** int format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** flag */
 	flag: number | null;

@@ -13,6 +13,7 @@ export * as get_course_user_groups from "./get_course_user_groups";
 export * as get_group_members from "./get_group_members";
 export * as get_groupings from "./get_groupings";
 export * as get_groups from "./get_groups";
+export * as get_groups_for_selector from "./get_groups_for_selector";
 export * as unassign_grouping from "./unassign_grouping";
 export * as update_groupings from "./update_groupings";
 export * as update_groups from "./update_groups";
