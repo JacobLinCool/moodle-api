@@ -1,7 +1,7 @@
 export interface ParamsMessagesItem {
 	/** the text of the message */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	textformat?: number | null;
 }
 

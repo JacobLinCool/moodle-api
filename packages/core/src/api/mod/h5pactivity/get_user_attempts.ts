@@ -130,6 +130,8 @@ export interface Returns {
 	activityid: number | null;
 	/** The complete users attempts list */
 	usersattempts: ReturnsUsersattempts;
+	/** Total number of attempts */
+	totalattempts: number | null;
 	/** list of warnings */
 	warnings: ReturnsWarnings;
 }

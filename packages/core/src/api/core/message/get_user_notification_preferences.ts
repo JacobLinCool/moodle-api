@@ -21,32 +21,6 @@ export interface ReturnsPreferencesProcessorsItem {
  */
 export type ReturnsPreferencesProcessors = ReturnsPreferencesProcessorsItem[];
 
-/**
- * DEPRECATED ATTRIBUTE -
-Kept for backward compatibility, use enabled instead.
- */
-export interface ReturnsPreferencesComponentsItemNotificationsItemProcessorsItemLoggedin {
-	/** Name */
-	name: string | null;
-	/** Display name */
-	displayname: string | null;
-	/** Is checked? */
-	checked: boolean | null;
-}
-
-/**
- * DEPRECATED ATTRIBUTE -
-Kept for backward compatibility, use enabled instead.
- */
-export interface ReturnsPreferencesComponentsItemNotificationsItemProcessorsItemLoggedoff {
-	/** Name */
-	name: string | null;
-	/** Display name */
-	displayname: string | null;
-	/** Is checked? */
-	checked: boolean | null;
-}
-
 export interface ReturnsPreferencesComponentsItemNotificationsItemProcessorsItem {
 	/** Display name */
 	displayname: string | null;
@@ -58,10 +32,6 @@ export interface ReturnsPreferencesComponentsItemNotificationsItemProcessorsItem
 	lockedmessage: string | null;
 	/** Is configured? */
 	userconfigured: number | null;
-	/** DEPRECATED ATTRIBUTE - Kept for backward compatibility, use enabled instead. */
-	loggedin: ReturnsPreferencesComponentsItemNotificationsItemProcessorsItemLoggedin;
-	/** DEPRECATED ATTRIBUTE - Kept for backward compatibility, use enabled instead. */
-	loggedoff: ReturnsPreferencesComponentsItemNotificationsItemProcessorsItemLoggedoff;
 	/** Is enabled? */
 	enabled: boolean | null;
 }

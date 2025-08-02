@@ -124,9 +124,11 @@ export interface ReturnsItem {
 	lastaccess: number | null;
 	/** Suspend user account, either false to enable user login or true to disable it */
 	suspended: boolean | null;
+	/** Whether the user is tracking forums. */
+	trackforums: number | null;
 	/** User profile description */
 	description: string | null;
-	/** int format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** int format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat: number | null;
 	/** Home city of the user */
 	city: string | null;

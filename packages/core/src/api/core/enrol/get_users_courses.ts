@@ -25,6 +25,8 @@ export interface ReturnsItemOverviewfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -49,7 +51,7 @@ export interface ReturnsItem {
 	visible: number | null;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	summaryformat: number | null;
 	/** course format: weeks, topics, social, site */
 	format: string | null;

@@ -1,6 +1,8 @@
 export interface Params {
 	/** ID of the course */
 	courseid: number | null;
+	/** Number of the section */
+	sectionnum?: number | null;
 }
 
 export interface ReturnsContentItemsItem {
@@ -22,6 +24,8 @@ export interface ReturnsContentItemsItem {
 	componentname: string;
 	/** The purpose of the component exposing the content item */
 	purpose: string;
+	/** Whether this content item is branded or not */
+	branded: boolean;
 	/** Has the user favourited the content item */
 	favourite: boolean;
 	/** If this item was pulled from the old callback and has no item id. */

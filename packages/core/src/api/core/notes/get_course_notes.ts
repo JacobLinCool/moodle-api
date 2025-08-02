@@ -14,7 +14,7 @@ export interface ReturnsSitenotesItem {
 	userid: number | null;
 	/** the content text formated */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 	/** time created (timestamp) */
 	created: number | null;
@@ -40,7 +40,7 @@ export interface ReturnsCoursenotesItem {
 	userid: number | null;
 	/** the content text formated */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 	/** time created (timestamp) */
 	created: number | null;
@@ -66,7 +66,7 @@ export interface ReturnsPersonalnotesItem {
 	userid: number | null;
 	/** the content text formated */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 	/** time created (timestamp) */
 	created: number | null;

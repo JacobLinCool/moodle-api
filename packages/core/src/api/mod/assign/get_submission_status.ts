@@ -45,6 +45,8 @@ export interface ReturnsLastattemptSubmissionPluginsItemFileareasItemFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -73,7 +75,7 @@ export interface ReturnsLastattemptSubmissionPluginsItemEditorfieldsItem {
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 
@@ -149,6 +151,8 @@ export interface ReturnsLastattemptTeamsubmissionPluginsItemFileareasItemFilesIt
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -177,7 +181,7 @@ export interface ReturnsLastattemptTeamsubmissionPluginsItemEditorfieldsItem {
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 
@@ -323,6 +327,8 @@ export interface ReturnsFeedbackPluginsItemFileareasItemFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -350,7 +356,7 @@ export interface ReturnsFeedbackPluginsItemEditorfieldsItem {
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 
@@ -409,6 +415,8 @@ export interface ReturnsPreviousattemptsItemSubmissionPluginsItemFileareasItemFi
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -437,7 +445,7 @@ export interface ReturnsPreviousattemptsItemSubmissionPluginsItemEditorfieldsIte
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 
@@ -538,6 +546,8 @@ export interface ReturnsPreviousattemptsItemFeedbackpluginsItemFileareasItemFile
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -566,7 +576,7 @@ export interface ReturnsPreviousattemptsItemFeedbackpluginsItemEditorfieldsItem 
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 
@@ -629,6 +639,8 @@ export interface ReturnsAssignmentdataAttachmentsIntroItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -656,6 +668,8 @@ export interface ReturnsAssignmentdataAttachmentsActivityItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -682,7 +696,7 @@ export interface ReturnsAssignmentdata {
 	attachments: ReturnsAssignmentdataAttachments;
 	/** Text of activity */
 	activity: string | null;
-	/** activity format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** activity format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	activityformat: number | null;
 }
 

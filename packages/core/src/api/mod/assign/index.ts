@@ -8,6 +8,7 @@ export * as get_user_flags from "./get_user_flags";
 export * as get_user_mappings from "./get_user_mappings";
 export * as list_participants from "./list_participants";
 export * as lock_submissions from "./lock_submissions";
+export * as remove_submission from "./remove_submission";
 export * as reveal_identities from "./reveal_identities";
 export * as revert_submissions_to_draft from "./revert_submissions_to_draft";
 export * as save_grade from "./save_grade";

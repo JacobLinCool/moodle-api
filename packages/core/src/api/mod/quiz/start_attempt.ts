@@ -19,6 +19,23 @@ export interface Params {
 	forcenew?: boolean | null;
 }
 
+/**
+ * The grade for each grade item.
+ */
+export interface ReturnsAttemptGradeitemmarksItem {
+	/** The name of this grade item. */
+	name: string | null;
+	/** The grade this attempt earned for this item. */
+	grade: number | null;
+	/** The total this grade is out of. */
+	maxgrade: number | null;
+}
+
+/**
+ * If the quiz has additional grades set up, the mark for each grade for this attempt.
+ */
+export type ReturnsAttemptGradeitemmarks = ReturnsAttemptGradeitemmarksItem[];
+
 export interface ReturnsAttempt {
 	/** Attempt id. */
 	id: number | null;
@@ -50,6 +67,8 @@ export interface ReturnsAttempt {
 	timecheckstate: number | null;
 	/** Total marks for this attempt. */
 	sumgrades: number | null;
+	/** If the quiz has additional grades set up, the mark for each grade for this attempt. */
+	gradeitemmarks: ReturnsAttemptGradeitemmarks;
 	/** Time when the student was notified that manual grading of their attempt was complete. */
 	gradednotificationsenttime: number | null;
 }

@@ -24,6 +24,8 @@ export interface Returns {
 	componentname: string;
 	/** The purpose of the component exposing the content item */
 	purpose: string;
+	/** Whether this content item is branded or not */
+	branded: boolean;
 	/** Has the user favourited the content item */
 	favourite: boolean;
 	/** If this item was pulled from the old callback and has no item id. */

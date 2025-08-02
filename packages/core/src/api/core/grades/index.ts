@@ -3,6 +3,8 @@ export * as create_gradecategory from "./create_gradecategory";
 export * as get_enrolled_users_for_search_widget from "./get_enrolled_users_for_search_widget";
 export * as get_enrolled_users_for_selector from "./get_enrolled_users_for_selector";
 export * as get_feedback from "./get_feedback";
+export * as get_gradable_users from "./get_gradable_users";
+export * as get_grade_tree from "./get_grade_tree";
 export * as get_gradeitems from "./get_gradeitems";
 export * as get_groups_for_search_widget from "./get_groups_for_search_widget";
 export * as get_groups_for_selector from "./get_groups_for_selector";

@@ -1,4 +1,5 @@
 export * as audiences_delete from "./audiences_delete";
+export * as can_view_system_report from "./can_view_system_report";
 export * as columns_add from "./columns_add";
 export * as columns_delete from "./columns_delete";
 export * as columns_reorder from "./columns_reorder";
@@ -17,6 +18,7 @@ export * as list_reports from "./list_reports";
 export * as reports_delete from "./reports_delete";
 export * as reports_get from "./reports_get";
 export * as retrieve_report from "./retrieve_report";
+export * as retrieve_system_report from "./retrieve_system_report";
 export * as schedules_delete from "./schedules_delete";
 export * as schedules_send from "./schedules_send";
 export * as schedules_toggle from "./schedules_toggle";

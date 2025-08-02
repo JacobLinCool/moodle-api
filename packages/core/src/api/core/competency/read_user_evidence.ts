@@ -10,7 +10,7 @@ export interface ReturnsCompetenciesItem {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;
@@ -98,7 +98,7 @@ export interface Returns {
 	name: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** url */
 	url: string;

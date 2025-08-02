@@ -78,6 +78,8 @@ export interface Returns {
 	guestjoinurl: string | null;
 	/** Guest join password */
 	guestpassword: string | null;
+	/** Show presentation file */
+	showpresentations: boolean | null;
 	/** List of features for the instance */
 	features: ReturnsFeatures;
 }

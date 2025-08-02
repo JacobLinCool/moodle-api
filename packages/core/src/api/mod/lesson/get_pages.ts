@@ -33,7 +33,7 @@ export interface ReturnsPagesItemPage {
 	title: string | null;
 	/** The contents of this page */
 	contents: string | null;
-	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentsformat: number | null;
 	/** Toggles display in the left menu block */
 	displayinmenublock: boolean | null;

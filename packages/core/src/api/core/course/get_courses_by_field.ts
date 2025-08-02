@@ -1,5 +1,5 @@
 export interface Params {
-	/** The field to search can be left empty for all courses or: id: course id ids: comma separated course ids shortname: course short name idnumber: course id number category: category id the course belongs to  */
+	/** The field to search can be left empty for all courses or: id: course id ids: comma separated course ids shortname: course short name idnumber: course id number category: category id the course belongs to sectionid: section id that belongs to a course  */
 	field?: string | null;
 	/** The value to match */
 	value?: string | null;
@@ -25,6 +25,8 @@ export interface ReturnsCoursesItemSummaryfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -52,6 +54,8 @@ export interface ReturnsCoursesItemOverviewfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -139,7 +143,7 @@ export interface ReturnsCoursesItem {
 	sortorder: number | null;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	summaryformat: number | null;
 	/** summary files in the summary field */
 	summaryfiles: ReturnsCoursesItemSummaryfiles;
@@ -205,6 +209,10 @@ export interface ReturnsCoursesItem {
 	filters: ReturnsCoursesItemFilters;
 	/** Additional options for particular course format. */
 	courseformatoptions: ReturnsCoursesItemCourseformatoptions;
+	/** Communication tool room name. */
+	communicationroomname: string | null;
+	/** Communication tool room URL. */
+	communicationroomurl: string | null;
 }
 
 /**

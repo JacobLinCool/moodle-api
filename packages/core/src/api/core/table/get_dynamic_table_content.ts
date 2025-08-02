@@ -15,6 +15,18 @@ export type ParamsSortdata = ParamsSortdataItem[];
  */
 export type ParamsFiltersItemValues = (string | null)[];
 
+export interface ParamsFiltersItemFilteroptionsItem {
+	/** Name of the filter option */
+	name: string | null;
+	/** Value of the filter option */
+	value: string | null;
+}
+
+/**
+ * Additional options for this filter
+ */
+export type ParamsFiltersItemFilteroptions = ParamsFiltersItemFilteroptionsItem[];
+
 export interface ParamsFiltersItem {
 	/** Name of the filter */
 	name: string | null;
@@ -22,6 +34,8 @@ export interface ParamsFiltersItem {
 	jointype: number | null;
 	/** The value to filter on */
 	values: ParamsFiltersItemValues;
+	/** Additional options for this filter */
+	filteroptions: ParamsFiltersItemFilteroptions;
 }
 
 /**

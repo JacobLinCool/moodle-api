@@ -18,8 +18,8 @@ export interface ReturnsLinkedcoursesItem {
 	idnumber: string;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
-	summaryformat: number | null;
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
+	summaryformat?: number | null;
 	/** startdate */
 	startdate: number;
 	/** enddate */
@@ -66,7 +66,7 @@ export interface ReturnsRelatedcompetenciesItem {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;
@@ -108,7 +108,7 @@ export interface ReturnsCompetency {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;
@@ -145,7 +145,7 @@ export interface ReturnsFramework {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** visible */
 	visible: boolean;

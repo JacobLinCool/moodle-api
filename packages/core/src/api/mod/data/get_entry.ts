@@ -22,6 +22,8 @@ export interface ReturnsEntryContentsItemFilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -76,6 +78,8 @@ export interface ReturnsEntryTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**

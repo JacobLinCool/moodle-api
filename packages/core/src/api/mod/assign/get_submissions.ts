@@ -34,6 +34,8 @@ export interface ReturnsAssignmentsItemSubmissionsItemPluginsItemFileareasItemFi
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -62,7 +64,7 @@ export interface ReturnsAssignmentsItemSubmissionsItemPluginsItemEditorfieldsIte
 	description: string | null;
 	/** field value */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format: number | null;
 }
 

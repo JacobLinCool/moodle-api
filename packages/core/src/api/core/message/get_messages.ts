@@ -31,7 +31,7 @@ export interface ReturnsMessagesItem {
 	text: string | null;
 	/** The message */
 	fullmessage: string | null;
-	/** fullmessage format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** fullmessage format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	fullmessageformat: number | null;
 	/** The message in html */
 	fullmessagehtml: string | null;

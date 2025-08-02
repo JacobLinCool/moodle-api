@@ -27,7 +27,7 @@ export interface ParamsCohortsItem {
 	idnumber: string | null;
 	/** cohort description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** cohort visible */
 	visible: boolean | null;

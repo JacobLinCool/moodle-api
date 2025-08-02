@@ -63,6 +63,8 @@ export interface ReturnsFilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**

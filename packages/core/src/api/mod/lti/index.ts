@@ -1,5 +1,6 @@
 export * as create_tool_proxy from "./create_tool_proxy";
 export * as create_tool_type from "./create_tool_type";
+export * as delete_course_tool_type from "./delete_course_tool_type";
 export * as delete_tool_proxy from "./delete_tool_proxy";
 export * as delete_tool_type from "./delete_tool_type";
 export * as get_ltis_by_courses from "./get_ltis_by_courses";
@@ -10,5 +11,6 @@ export * as get_tool_types from "./get_tool_types";
 export * as get_tool_types_and_proxies from "./get_tool_types_and_proxies";
 export * as get_tool_types_and_proxies_count from "./get_tool_types_and_proxies_count";
 export * as is_cartridge from "./is_cartridge";
+export * as toggle_showinactivitychooser from "./toggle_showinactivitychooser";
 export * as update_tool_type from "./update_tool_type";
 export * as view_lti from "./view_lti";

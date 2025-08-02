@@ -7,7 +7,7 @@ export interface ParamsNotesItem {
 	courseid: number | null;
 	/** the text of the message - text or HTML */
 	text: string | null;
-	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** text format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	format?: number | null;
 	/** your own client id for the note. If this id is provided, the fail message id will be returned to you */
 	clientnoteid: string | null;

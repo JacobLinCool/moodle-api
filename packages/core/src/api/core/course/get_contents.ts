@@ -17,6 +17,38 @@ export interface Params {
 	options?: ParamsOptions;
 }
 
+/**
+ * Each of the attribute names and values
+ */
+export interface ReturnsItemModulesItemActivitybadgeBadgeextraattributesItem {
+	/** The attribute name */
+	name: string | null;
+	/** The attribute value */
+	value: string | null;
+}
+
+/**
+ * An optional array of extra HTML attributes to add to the badge element
+ */
+export type ReturnsItemModulesItemActivitybadgeBadgeextraattributes =
+	ReturnsItemModulesItemActivitybadgeBadgeextraattributesItem[];
+
+/**
+ * Activity badge to display near the name
+ */
+export interface ReturnsItemModulesItemActivitybadge {
+	/** The content to be displayed in the activity badge */
+	badgecontent: string | null;
+	/** The style for the activity badge */
+	badgestyle: string | null;
+	/** An optional URL to redirect the user when the activity badge is clicked */
+	badgeurl: string | null;
+	/** An optional id in case the module wants to add some code for the activity badge */
+	badgeelementid: string | null;
+	/** An optional array of extra HTML attributes to add to the badge element */
+	badgeextraattributes: ReturnsItemModulesItemActivitybadgeBadgeextraattributes;
+}
+
 export interface ReturnsItemModulesItemCompletiondataDetailsItemRulevalue {
 	/** status */
 	status: number;
@@ -55,6 +87,8 @@ export interface ReturnsItemModulesItemCompletiondata {
 	uservisible: boolean;
 	/** An array of completion details containing the description and status. */
 	details: ReturnsItemModulesItemCompletiondataDetails;
+	/** Whether the overall completion state of this course module should be marked as complete or not. */
+	isoverallcomplete: boolean;
 }
 
 export interface ReturnsItemModulesItemDatesItem {
@@ -94,6 +128,8 @@ export interface ReturnsItemModulesItemContentsItemTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**
@@ -187,6 +223,10 @@ export interface ReturnsItemModulesItem {
 	modicon: string | null;
 	/** activity module type */
 	modname: string | null;
+	/** the module purpose */
+	purpose: string | null;
+	/** Whether the module is branded or not */
+	branded: boolean | null;
 	/** activity module plural name */
 	modplural: string | null;
 	/** module availability settings */
@@ -197,6 +237,8 @@ export interface ReturnsItemModulesItem {
 	onclick: string | null;
 	/** After link info to be displayed. */
 	afterlink: string | null;
+	/** Activity badge to display near the name */
+	activitybadge: ReturnsItemModulesItemActivitybadge;
 	/** Custom data (JSON encoded). */
 	customdata: string | null;
 	/** Whether the module has no view page */
@@ -208,6 +250,8 @@ export interface ReturnsItemModulesItem {
 	downloadcontent: number | null;
 	/** Course dates */
 	dates?: ReturnsItemModulesItemDates;
+	/** Group mode value */
+	groupmode: number | null;
 	/** Course contents */
 	contents?: ReturnsItemModulesItemContents;
 	/** Contents summary information. */
@@ -228,7 +272,7 @@ export interface ReturnsItem {
 	visible: number | null;
 	/** Section description */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	summaryformat: number | null;
 	/** Section number inside the course */
 	section: number | null;
@@ -238,6 +282,10 @@ export interface ReturnsItem {
 	uservisible: boolean | null;
 	/** Availability information. */
 	availabilityinfo: string | null;
+	/** The delegate component of this section if any. */
+	component: string | null;
+	/** The optional item id delegate component can use to identify its instance. */
+	itemid: number | null;
 	/** list of module */
 	modules: ReturnsItemModules;
 }

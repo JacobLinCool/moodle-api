@@ -36,6 +36,8 @@ export interface ReturnsEntriesItemSummaryfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -60,6 +62,8 @@ export interface ReturnsEntriesItemAttachmentfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -88,6 +92,8 @@ export interface ReturnsEntriesItemTagsItem {
 	ordering: number;
 	/** Whether the tag is flagged as inappropriate. */
 	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
 }
 
 /**
@@ -114,7 +120,7 @@ export interface ReturnsEntriesItem {
 	subject: string;
 	/** Post summary. */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	summaryformat?: number | null;
 	/** Post content. */
 	content: string | null;
@@ -140,6 +146,8 @@ export interface ReturnsEntriesItem {
 	attachmentfiles: ReturnsEntriesItemAttachmentfiles;
 	/** Tags. */
 	tags: ReturnsEntriesItemTags;
+	/** Whether the user can edit the post. */
+	canedit: boolean;
 }
 
 export type ReturnsEntries = ReturnsEntriesItem[];

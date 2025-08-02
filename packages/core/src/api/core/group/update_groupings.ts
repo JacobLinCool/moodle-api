@@ -1,3 +1,15 @@
+export interface ParamsGroupingsItemCustomfieldsItem {
+	/** The shortname of the custom field */
+	shortname: string | null;
+	/** The value of the custom field */
+	value: string | null;
+}
+
+/**
+ * Custom fields
+ */
+export type ParamsGroupingsItemCustomfields = ParamsGroupingsItemCustomfieldsItem[];
+
 export interface ParamsGroupingsItem {
 	/** id of grouping */
 	id: number | null;
@@ -5,10 +17,12 @@ export interface ParamsGroupingsItem {
 	name: string | null;
 	/** grouping description text */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** id number */
 	idnumber: string | null;
+	/** Custom fields */
+	customfields: ParamsGroupingsItemCustomfields;
 }
 
 /**

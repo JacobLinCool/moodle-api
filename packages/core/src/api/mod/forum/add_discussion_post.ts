@@ -19,7 +19,7 @@ export interface Params {
 	message: string | null;
 	/** Options */
 	options?: ParamsOptions;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat?: number | null;
 }
 
@@ -271,7 +271,7 @@ export interface ReturnsPost {
 	replysubject: string;
 	/** message */
 	message: string;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat: number | null;
 	author: ReturnsPostAuthor;
 	/** discussionid */

@@ -28,6 +28,8 @@ export interface ReturnsScormsItemIntrofilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -49,7 +51,7 @@ export interface ReturnsScormsItem {
 	name: string | null;
 	/** Activity introduction */
 	intro: string | null;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat: number | null;
 	/** Files in the introduction */
 	introfiles: ReturnsScormsItemIntrofiles;
@@ -143,6 +145,18 @@ export interface ReturnsScormsItem {
 
 export type ReturnsScorms = ReturnsScormsItem[];
 
+export interface ReturnsOptionsItem {
+	/** Options name */
+	name: string | null;
+	/** Option value */
+	value: string | null;
+}
+
+/**
+ * Global SCORM options
+ */
+export type ReturnsOptions = ReturnsOptionsItem[];
+
 /**
  * warning
  */
@@ -164,6 +178,8 @@ export type ReturnsWarnings = ReturnsWarningsItem[];
 
 export interface Returns {
 	scorms: ReturnsScorms;
+	/** Global SCORM options */
+	options: ReturnsOptions;
 	/** list of warnings */
 	warnings: ReturnsWarnings;
 }

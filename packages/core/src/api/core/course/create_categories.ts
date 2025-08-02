@@ -7,7 +7,7 @@ export interface ParamsCategoriesItem {
 	idnumber: string | null;
 	/** the new category description */
 	description: string | null;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** the new category theme. This option must be enabled on moodle */
 	theme: string | null;

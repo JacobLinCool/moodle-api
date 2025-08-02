@@ -39,7 +39,7 @@ export interface ReturnsPage {
 	title: string | null;
 	/** The contents of this page */
 	contents: string | null;
-	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** contents format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentsformat: number | null;
 	/** Toggles display in the left menu block */
 	displayinmenublock: boolean | null;
@@ -71,6 +71,8 @@ export interface ReturnsContentfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -98,6 +100,8 @@ export interface ReturnsAnswersItemAnswerfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -125,6 +129,8 @@ export interface ReturnsAnswersItemResponsefilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -156,11 +162,11 @@ export interface ReturnsAnswersItem {
 	timemodified: number | null;
 	/** Possible answer text */
 	answer: string | null;
-	/** answer format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** answer format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	answerformat: number | null;
 	/** Response text for the answer */
 	response: string | null;
-	/** response format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** response format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	responseformat: number | null;
 }
 

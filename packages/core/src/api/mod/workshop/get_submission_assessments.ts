@@ -20,6 +20,8 @@ export interface ReturnsAssessmentsItemFeedbackcontentfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -45,6 +47,8 @@ export interface ReturnsAssessmentsItemFeedbackattachmentfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -76,13 +80,13 @@ export interface ReturnsAssessmentsItem {
 	gradinggradeoverby: number | null;
 	/** The comment/feedback from the reviewer for the author. */
 	feedbackauthor: string | null;
-	/** feedbackauthor format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** feedbackauthor format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	feedbackauthorformat?: number | null;
 	/** Are there some files attached to the feedbackauthor field? Sets to 1 by file_postupdate_standard_filemanager(). */
 	feedbackauthorattachment: number | null;
 	/** The comment/feedback from the teacher for the reviewer. For example the reason why the grade for assessment was overridden */
 	feedbackreviewer: string | null;
-	/** feedbackreviewer format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** feedbackreviewer format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	feedbackreviewerformat?: number | null;
 	/** feedbackcontentfiles */
 	feedbackcontentfiles: ReturnsAssessmentsItemFeedbackcontentfiles;

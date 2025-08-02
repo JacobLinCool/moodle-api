@@ -31,6 +31,8 @@ export interface ReturnsDiscussionsItemMessageinlinefilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -59,6 +61,8 @@ export interface ReturnsDiscussionsItemAttachmentsItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -100,7 +104,7 @@ export interface ReturnsDiscussionsItem {
 	subject: string | null;
 	/** The post message */
 	message: string | null;
-	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** message format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	messageformat: number | null;
 	/** Can we trust? */
 	messagetrust: number | null;

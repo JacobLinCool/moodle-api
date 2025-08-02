@@ -5,6 +5,61 @@ export interface Params {
 	perpage?: number | null;
 }
 
+export interface ReturnsReportsItemTagsItem {
+	/** Tag id. */
+	id: number;
+	/** Tag name. */
+	name: string;
+	/** The raw, unnormalised name for the tag as entered by users. */
+	rawname: string;
+	/** Whether this tag is standard. */
+	isstandard: boolean;
+	/** Tag collection id. */
+	tagcollid: number;
+	/** Tag instance id. */
+	taginstanceid: number;
+	/** Context the tag instance belongs to. */
+	taginstancecontextid: number;
+	/** Id of the record tagged. */
+	itemid: number;
+	/** Tag ordering. */
+	ordering: number;
+	/** Whether the tag is flagged as inappropriate. */
+	flag: number | null;
+	/** The url to view the tag. */
+	viewurl: string | null;
+}
+
+/**
+ * tags
+ */
+export type ReturnsReportsItemTags = ReturnsReportsItemTagsItem[];
+
+export interface ReturnsReportsItemCustomfieldsDataItem {
+	/** value */
+	value: string | null;
+	/** type */
+	type: string;
+	/** shortname */
+	shortname: string;
+	/** name */
+	name: string;
+	/** hasvalue */
+	hasvalue: boolean;
+	/** instanceid */
+	instanceid: number;
+}
+
+/**
+ * data
+ */
+export type ReturnsReportsItemCustomfieldsData = ReturnsReportsItemCustomfieldsDataItem[];
+
+export interface ReturnsReportsItemCustomfields {
+	/** data */
+	data: ReturnsReportsItemCustomfieldsData;
+}
+
 export interface ReturnsReportsItemModifiedby {
 	/** id */
 	id: number;
@@ -65,6 +120,9 @@ export interface ReturnsReportsItem {
 	usermodified: number;
 	/** sourcename */
 	sourcename: string | null;
+	/** tags */
+	tags: ReturnsReportsItemTags;
+	customfields: ReturnsReportsItemCustomfields;
 	modifiedby: ReturnsReportsItemModifiedby;
 }
 

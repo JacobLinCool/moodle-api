@@ -27,7 +27,7 @@ export interface ReturnsStatisticsLeastproficientItem {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;
@@ -88,7 +88,7 @@ export interface ReturnsCompetenciesItemCompetency {
 	idnumber: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** sortorder */
 	sortorder: number;
@@ -302,7 +302,7 @@ export interface ReturnsCompetenciesItemPlansItemTemplate {
 	shortname: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** duedate */
 	duedate: number;
@@ -339,7 +339,7 @@ export interface ReturnsCompetenciesItemPlansItem {
 	name: string;
 	/** description */
 	description: string;
-	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** description format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	descriptionformat?: number | null;
 	/** userid */
 	userid: number;

@@ -28,6 +28,8 @@ export interface ReturnsSubmissionsItemContentfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -52,6 +54,8 @@ export interface ReturnsSubmissionsItemAttachmentfilesItem {
 	isexternalfile: boolean;
 	/** The repository type for the external files. */
 	repositorytype: string | null;
+	/** Relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -76,7 +80,7 @@ export interface ReturnsSubmissionsItem {
 	title: string;
 	/** Submission text. */
 	content: string | null;
-	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** content format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	contentformat?: number | null;
 	/** The trust mode of the data. */
 	contenttrust: number;
@@ -90,7 +94,7 @@ export interface ReturnsSubmissionsItem {
 	gradeoverby: number | null;
 	/** Teacher comment/feedback for the author of the submission, for example describing the reasons for the grade overriding. */
 	feedbackauthor: string | null;
-	/** feedbackauthor format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** feedbackauthor format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	feedbackauthorformat?: number | null;
 	/** The timestamp when grade or gradeover was recently modified. */
 	timegraded: number | null;

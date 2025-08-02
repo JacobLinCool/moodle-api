@@ -7,6 +7,27 @@ export interface Params {
 	pagesize?: number | null;
 }
 
+export interface ReturnsButtonAttributesItem {
+	/** name */
+	name: string;
+	/** value */
+	value: string;
+}
+
+/**
+ * attributes
+ */
+export type ReturnsButtonAttributes = ReturnsButtonAttributesItem[];
+
+export interface ReturnsButton {
+	/** tag */
+	tag: string;
+	/** title */
+	title: string;
+	/** attributes */
+	attributes: ReturnsButtonAttributes;
+}
+
 export interface ReturnsAttributesItem {
 	/** name */
 	name: string;
@@ -246,6 +267,9 @@ export interface Returns {
 	usermodified: number;
 	/** table */
 	table: string;
+	button: ReturnsButton;
+	/** infocontainer */
+	infocontainer: string;
 	/** filtersapplied */
 	filtersapplied: number;
 	/** filterspresent */

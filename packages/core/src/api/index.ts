@@ -1,6 +1,9 @@
+import * as aiplacement from "./aiplacement";
 import * as auth from "./auth";
 import * as block from "./block";
 import * as core from "./core";
+import * as customfield from "./customfield";
+import * as editor from "./editor";
 import * as enrol from "./enrol";
 import * as gradereport from "./gradereport";
 import * as gradingform from "./gradingform";
@@ -12,9 +15,12 @@ import * as quizaccess from "./quizaccess";
 import * as report from "./report";
 import * as tiny from "./tiny";
 import * as tool from "./tool";
+export * as aiplacement from "./aiplacement";
 export * as auth from "./auth";
 export * as block from "./block";
 export * as core from "./core";
+export * as customfield from "./customfield";
+export * as editor from "./editor";
 export * as enrol from "./enrol";
 export * as gradereport from "./gradereport";
 export * as gradingform from "./gradingform";
@@ -29,6 +35,22 @@ export * as tiny from "./tiny";
 export * as tool from "./tool";
 
 export type FunctionDefinition = {
+	aiplacement_courseassist_explain_text: [
+		aiplacement.courseassist.explain_text.Params,
+		aiplacement.courseassist.explain_text.Returns,
+	];
+	aiplacement_courseassist_summarise_text: [
+		aiplacement.courseassist.summarise_text.Params,
+		aiplacement.courseassist.summarise_text.Returns,
+	];
+	aiplacement_editor_generate_image: [
+		aiplacement.editor.generate_image.Params,
+		aiplacement.editor.generate_image.Returns,
+	];
+	aiplacement_editor_generate_text: [
+		aiplacement.editor.generate_text.Params,
+		aiplacement.editor.generate_text.Returns,
+	];
 	auth_email_get_signup_settings: [
 		auth.email.get_signup_settings.Params,
 		auth.email.get_signup_settings.Returns,
@@ -62,6 +84,27 @@ export type FunctionDefinition = {
 		core.admin.set_plugin_state.Params,
 		core.admin.set_plugin_state.Returns,
 	];
+	core_ai_delete_provider_instance: [
+		core.ai.delete_provider_instance.Params,
+		core.ai.delete_provider_instance.Returns,
+	];
+	core_ai_get_policy_status: [
+		core.ai.get_policy_status.Params,
+		core.ai.get_policy_status.Returns,
+	];
+	core_ai_set_action: [core.ai.set_action.Params, core.ai.set_action.Returns];
+	core_ai_set_policy_status: [
+		core.ai.set_policy_status.Params,
+		core.ai.set_policy_status.Returns,
+	];
+	core_ai_set_provider_order: [
+		core.ai.set_provider_order.Params,
+		core.ai.set_provider_order.Returns,
+	];
+	core_ai_set_provider_status: [
+		core.ai.set_provider_status.Params,
+		core.ai.set_provider_status.Returns,
+	];
 	core_auth_confirm_user: [core.auth.confirm_user.Params, core.auth.confirm_user.Returns];
 	core_auth_is_age_digital_consent_verification_enabled: [
 		core.auth.is_age_digital_consent_verification_enabled.Params,
@@ -92,6 +135,19 @@ export type FunctionDefinition = {
 		core.backup.get_copy_progress.Params,
 		core.backup.get_copy_progress.Returns,
 	];
+	core_badges_disable_badges: [
+		core.badges.disable_badges.Params,
+		core.badges.disable_badges.Returns,
+	];
+	core_badges_enable_badges: [
+		core.badges.enable_badges.Params,
+		core.badges.enable_badges.Returns,
+	];
+	core_badges_get_badge: [core.badges.get_badge.Params, core.badges.get_badge.Returns];
+	core_badges_get_user_badge_by_hash: [
+		core.badges.get_user_badge_by_hash.Params,
+		core.badges.get_user_badge_by_hash.Returns,
+	];
 	core_badges_get_user_badges: [
 		core.badges.get_user_badges.Params,
 		core.badges.get_user_badges.Returns,
@@ -108,7 +164,18 @@ export type FunctionDefinition = {
 		core.block.get_dashboard_blocks.Params,
 		core.block.get_dashboard_blocks.Returns,
 	];
+	core_blog_add_entry: [core.blog.add_entry.Params, core.blog.add_entry.Returns];
+	core_blog_delete_entry: [core.blog.delete_entry.Params, core.blog.delete_entry.Returns];
+	core_blog_get_access_information: [
+		core.blog.get_access_information.Params,
+		core.blog.get_access_information.Returns,
+	];
 	core_blog_get_entries: [core.blog.get_entries.Params, core.blog.get_entries.Returns];
+	core_blog_prepare_entry_for_edition: [
+		core.blog.prepare_entry_for_edition.Params,
+		core.blog.prepare_entry_for_edition.Returns,
+	];
+	core_blog_update_entry: [core.blog.update_entry.Params, core.blog.update_entry.Returns];
 	core_blog_view_entries: [core.blog.view_entries.Params, core.blog.view_entries.Returns];
 	core_calendar_create_calendar_events: [
 		core.calendar.create_calendar_events.Params,
@@ -175,6 +242,10 @@ export type FunctionDefinition = {
 		core.calendar.update_event_start_day.Returns,
 	];
 	core_change_editmode: [core.change.editmode.Params, core.change.editmode.Returns];
+	core_check_get_result_admintree: [
+		core.check.get_result_admintree.Params,
+		core.check.get_result_admintree.Returns,
+	];
 	core_cohort_add_cohort_members: [
 		core.cohort.add_cohort_members.Params,
 		core.cohort.add_cohort_members.Returns,
@@ -331,6 +402,10 @@ export type FunctionDefinition = {
 	core_completion_update_activity_completion_status_manually: [
 		core.completion.update_activity_completion_status_manually.Params,
 		core.completion.update_activity_completion_status_manually.Returns,
+	];
+	core_contentbank_copy_content: [
+		core.contentbank.copy_content.Params,
+		core.contentbank.copy_content.Returns,
 	];
 	core_contentbank_delete_content: [
 		core.contentbank.delete_content.Params,
@@ -495,6 +570,10 @@ export type FunctionDefinition = {
 		core.files.get_unused_draft_itemid.Returns,
 	];
 	core_files_upload: [core.files.upload.Params, core.files.upload.Returns];
+	core_filters_get_all_states: [
+		core.filters.get_all_states.Params,
+		core.filters.get_all_states.Returns,
+	];
 	core_filters_get_available_in_context: [
 		core.filters.get_available_in_context.Params,
 		core.filters.get_available_in_context.Returns,
@@ -528,6 +607,10 @@ export type FunctionDefinition = {
 		core.grades.get_enrolled_users_for_selector.Returns,
 	];
 	core_grades_get_feedback: [core.grades.get_feedback.Params, core.grades.get_feedback.Returns];
+	core_grades_get_gradable_users: [
+		core.grades.get_gradable_users.Params,
+		core.grades.get_gradable_users.Returns,
+	];
 	core_grades_get_gradeitems: [
 		core.grades.get_gradeitems.Params,
 		core.grades.get_gradeitems.Returns,
@@ -595,6 +678,10 @@ export type FunctionDefinition = {
 	];
 	core_group_get_groupings: [core.group.get_groupings.Params, core.group.get_groupings.Returns];
 	core_group_get_groups: [core.group.get_groups.Params, core.group.get_groups.Returns];
+	core_group_get_groups_for_selector: [
+		core.group.get_groups_for_selector.Params,
+		core.group.get_groups_for_selector.Returns,
+	];
 	core_h5p_get_trusted_h5p_file: [
 		core.h5p.get_trusted_h5p_file.Params,
 		core.h5p.get_trusted_h5p_file.Returns,
@@ -680,6 +767,10 @@ export type FunctionDefinition = {
 		core.message.get_unread_conversation_counts.Params,
 		core.message.get_unread_conversation_counts.Returns,
 	];
+	core_message_get_unsent_message: [
+		core.message.get_unsent_message.Params,
+		core.message.get_unsent_message.Returns,
+	];
 	core_message_get_user_contacts: [
 		core.message.get_user_contacts.Params,
 		core.message.get_user_contacts.Returns,
@@ -720,6 +811,10 @@ export type FunctionDefinition = {
 		core.message.send_messages_to_conversation.Params,
 		core.message.send_messages_to_conversation.Returns,
 	];
+	core_message_set_default_notification: [
+		core.message.set_default_notification.Params,
+		core.message.set_default_notification.Returns,
+	];
 	core_message_set_favourite_conversations: [
 		core.message.set_favourite_conversations.Params,
 		core.message.set_favourite_conversations.Returns,
@@ -744,10 +839,19 @@ export type FunctionDefinition = {
 		core.moodlenet.get_share_info_activity.Params,
 		core.moodlenet.get_share_info_activity.Returns,
 	];
+	core_moodlenet_get_shared_course_info: [
+		core.moodlenet.get_shared_course_info.Params,
+		core.moodlenet.get_shared_course_info.Returns,
+	];
 	core_moodlenet_send_activity: [
 		core.moodlenet.send_activity.Params,
 		core.moodlenet.send_activity.Returns,
 	];
+	core_moodlenet_send_course: [
+		core.moodlenet.send_course.Params,
+		core.moodlenet.send_course.Returns,
+	];
+	core_my_view_page: [core.my.view_page.Params, core.my.view_page.Returns];
 	core_notes_create_notes: [core.notes.create_notes.Params, core.notes.create_notes.Returns];
 	core_notes_delete_notes: [core.notes.delete_notes.Params, core.notes.delete_notes.Returns];
 	core_notes_get_course_notes: [
@@ -769,6 +873,10 @@ export type FunctionDefinition = {
 		core.output.load_template_with_dependencies.Params,
 		core.output.load_template_with_dependencies.Returns,
 	];
+	core_output_poll_stored_progress: [
+		core.output.poll_stored_progress.Params,
+		core.output.poll_stored_progress.Returns,
+	];
 	core_payment_get_available_gateways: [
 		core.payment.get_available_gateways.Params,
 		core.payment.get_available_gateways.Returns,
@@ -776,6 +884,10 @@ export type FunctionDefinition = {
 	core_question_get_random_question_summaries: [
 		core.question.get_random_question_summaries.Params,
 		core.question.get_random_question_summaries.Returns,
+	];
+	core_question_search_shared_banks: [
+		core.question.search_shared_banks.Params,
+		core.question.search_shared_banks.Returns,
 	];
 	core_question_submit_tags_form: [
 		core.question.submit_tags_form.Params,
@@ -850,6 +962,10 @@ export type FunctionDefinition = {
 		core.reportbuilder.retrieve_report.Params,
 		core.reportbuilder.retrieve_report.Returns,
 	];
+	core_reportbuilder_retrieve_system_report: [
+		core.reportbuilder.retrieve_system_report.Params,
+		core.reportbuilder.retrieve_system_report.Returns,
+	];
 	core_reportbuilder_view_report: [
 		core.reportbuilder.view_report.Params,
 		core.reportbuilder.view_report.Returns,
@@ -858,9 +974,23 @@ export type FunctionDefinition = {
 		core.search.get_relevant_users.Params,
 		core.search.get_relevant_users.Returns,
 	];
+	core_search_get_results: [core.search.get_results.Params, core.search.get_results.Returns];
+	core_search_get_search_areas_list: [
+		core.search.get_search_areas_list.Params,
+		core.search.get_search_areas_list.Returns,
+	];
+	core_search_get_top_results: [
+		core.search.get_top_results.Params,
+		core.search.get_top_results.Returns,
+	];
+	core_search_view_results: [core.search.view_results.Params, core.search.view_results.Returns];
 	core_session_time_remaining: [
 		core.session.time_remaining.Params,
 		core.session.time_remaining.Returns,
+	];
+	core_sms_set_gateway_status: [
+		core.sms.set_gateway_status.Params,
+		core.sms.set_gateway_status.Returns,
 	];
 	core_table_get_dynamic_table_content: [
 		core.table.get_dynamic_table_content.Params,
@@ -909,6 +1039,10 @@ export type FunctionDefinition = {
 		core.user.get_users_by_field.Params,
 		core.user.get_users_by_field.Returns,
 	];
+	core_user_prepare_private_files_for_edition: [
+		core.user.prepare_private_files_for_edition.Params,
+		core.user.prepare_private_files_for_edition.Returns,
+	];
 	core_user_remove_user_device: [
 		core.user.remove_user_device.Params,
 		core.user.remove_user_device.Returns,
@@ -922,6 +1056,10 @@ export type FunctionDefinition = {
 		core.user.set_user_preferences.Returns,
 	];
 	core_user_update_picture: [core.user.update_picture.Params, core.user.update_picture.Returns];
+	core_user_update_private_files: [
+		core.user.update_private_files.Params,
+		core.user.update_private_files.Returns,
+	];
 	core_user_update_user_device_public_key: [
 		core.user.update_user_device_public_key.Params,
 		core.user.update_user_device_public_key.Returns,
@@ -938,9 +1076,21 @@ export type FunctionDefinition = {
 	];
 	core_xapi_get_states: [core.xapi.get_states.Params, core.xapi.get_states.Returns];
 	core_xapi_statement_post: [core.xapi.statement_post.Params, core.xapi.statement_post.Returns];
+	customfield_number_recalculate_value: [
+		customfield.number.recalculate_value.Params,
+		customfield.number.recalculate_value.Returns,
+	];
+	editor_tiny_get_configuration: [
+		editor.tiny.get_configuration.Params,
+		editor.tiny.get_configuration.Returns,
+	];
 	enrol_guest_get_instance_info: [
 		enrol.guest.get_instance_info.Params,
 		enrol.guest.get_instance_info.Returns,
+	];
+	enrol_guest_validate_password: [
+		enrol.guest.validate_password.Params,
+		enrol.guest.validate_password.Returns,
 	];
 	enrol_meta_add_instances: [enrol.meta.add_instances.Params, enrol.meta.add_instances.Returns];
 	enrol_meta_delete_instances: [
@@ -1052,6 +1202,10 @@ export type FunctionDefinition = {
 	mod_assign_lock_submissions: [
 		mod.assign.lock_submissions.Params,
 		mod.assign.lock_submissions.Returns,
+	];
+	mod_assign_remove_submission: [
+		mod.assign.remove_submission.Params,
+		mod.assign.remove_submission.Returns,
 	];
 	mod_assign_reveal_identities: [
 		mod.assign.reveal_identities.Params,
@@ -1521,6 +1675,14 @@ export type FunctionDefinition = {
 		mod.page.get_pages_by_courses.Returns,
 	];
 	mod_page_view_page: [mod.page.view_page.Params, mod.page.view_page.Returns];
+	mod_quiz_add_random_questions: [
+		mod.quiz.add_random_questions.Params,
+		mod.quiz.add_random_questions.Returns,
+	];
+	mod_quiz_delete_overrides: [
+		mod.quiz.delete_overrides.Params,
+		mod.quiz.delete_overrides.Returns,
+	];
 	mod_quiz_get_attempt_access_information: [
 		mod.quiz.get_attempt_access_information.Params,
 		mod.quiz.get_attempt_access_information.Returns,
@@ -1541,6 +1703,7 @@ export type FunctionDefinition = {
 		mod.quiz.get_combined_review_options.Params,
 		mod.quiz.get_combined_review_options.Returns,
 	];
+	mod_quiz_get_overrides: [mod.quiz.get_overrides.Params, mod.quiz.get_overrides.Returns];
 	mod_quiz_get_quiz_access_information: [
 		mod.quiz.get_quiz_access_information.Params,
 		mod.quiz.get_quiz_access_information.Returns,
@@ -1565,13 +1728,22 @@ export type FunctionDefinition = {
 		mod.quiz.get_user_best_grade.Params,
 		mod.quiz.get_user_best_grade.Returns,
 	];
+	mod_quiz_get_user_quiz_attempts: [
+		mod.quiz.get_user_quiz_attempts.Params,
+		mod.quiz.get_user_quiz_attempts.Returns,
+	];
 	mod_quiz_process_attempt: [mod.quiz.process_attempt.Params, mod.quiz.process_attempt.Returns];
 	mod_quiz_save_attempt: [mod.quiz.save_attempt.Params, mod.quiz.save_attempt.Returns];
+	mod_quiz_save_overrides: [mod.quiz.save_overrides.Params, mod.quiz.save_overrides.Returns];
 	mod_quiz_set_question_version: [
 		mod.quiz.set_question_version.Params,
 		mod.quiz.set_question_version.Returns,
 	];
 	mod_quiz_start_attempt: [mod.quiz.start_attempt.Params, mod.quiz.start_attempt.Returns];
+	mod_quiz_update_filter_condition: [
+		mod.quiz.update_filter_condition.Params,
+		mod.quiz.update_filter_condition.Returns,
+	];
 	mod_quiz_view_attempt: [mod.quiz.view_attempt.Params, mod.quiz.view_attempt.Returns];
 	mod_quiz_view_attempt_review: [
 		mod.quiz.view_attempt_review.Params,
@@ -1745,6 +1917,10 @@ export type FunctionDefinition = {
 		qbank.editquestion.set_status.Params,
 		qbank.editquestion.set_status.Returns,
 	];
+	qbank_managecategories_move_category: [
+		qbank.managecategories.move_category.Params,
+		qbank.managecategories.move_category.Returns,
+	];
 	qbank_tagquestion_submit_tags_form: [
 		qbank.tagquestion.submit_tags_form.Params,
 		qbank.tagquestion.submit_tags_form.Returns,
@@ -1782,6 +1958,8 @@ export type FunctionDefinition = {
 		tiny.autosave.update_session.Returns,
 	];
 	tiny_equation_filter: [tiny.equation.filter.Params, tiny.equation.filter.Returns];
+	tiny_media_preview: [tiny.media.preview.Params, tiny.media.preview.Returns];
+	tiny_premium_get_api_key: [tiny.premium.get_api_key.Params, tiny.premium.get_api_key.Returns];
 	tool_analytics_potential_contexts: [
 		tool.analytics.potential_contexts.Params,
 		tool.analytics.potential_contexts.Returns,
@@ -1818,6 +1996,10 @@ export type FunctionDefinition = {
 		tool.dataprivacy.create_category_form.Params,
 		tool.dataprivacy.create_category_form.Returns,
 	];
+	tool_dataprivacy_create_data_request: [
+		tool.dataprivacy.create_data_request.Params,
+		tool.dataprivacy.create_data_request.Returns,
+	];
 	tool_dataprivacy_create_purpose_form: [
 		tool.dataprivacy.create_purpose_form.Params,
 		tool.dataprivacy.create_purpose_form.Returns,
@@ -1834,6 +2016,10 @@ export type FunctionDefinition = {
 		tool.dataprivacy.deny_data_request.Params,
 		tool.dataprivacy.deny_data_request.Returns,
 	];
+	tool_dataprivacy_get_access_information: [
+		tool.dataprivacy.get_access_information.Params,
+		tool.dataprivacy.get_access_information.Returns,
+	];
 	tool_dataprivacy_get_activity_options: [
 		tool.dataprivacy.get_activity_options.Params,
 		tool.dataprivacy.get_activity_options.Returns,
@@ -1845,6 +2031,10 @@ export type FunctionDefinition = {
 	tool_dataprivacy_get_data_request: [
 		tool.dataprivacy.get_data_request.Params,
 		tool.dataprivacy.get_data_request.Returns,
+	];
+	tool_dataprivacy_get_data_requests: [
+		tool.dataprivacy.get_data_requests.Params,
+		tool.dataprivacy.get_data_requests.Returns,
 	];
 	tool_dataprivacy_get_purpose_options: [
 		tool.dataprivacy.get_purpose_options.Params,
@@ -1869,6 +2059,10 @@ export type FunctionDefinition = {
 	tool_dataprivacy_set_contextlevel_form: [
 		tool.dataprivacy.set_contextlevel_form.Params,
 		tool.dataprivacy.set_contextlevel_form.Returns,
+	];
+	tool_dataprivacy_submit_selected_courses_form: [
+		tool.dataprivacy.submit_selected_courses_form.Params,
+		tool.dataprivacy.submit_selected_courses_form.Returns,
 	];
 	tool_dataprivacy_tree_extra_branches: [
 		tool.dataprivacy.tree_extra_branches.Params,
@@ -1973,6 +2167,14 @@ export type FunctionDefinition = {
 	tool_policy_get_policy_version: [
 		tool.policy.get_policy_version.Params,
 		tool.policy.get_policy_version.Returns,
+	];
+	tool_policy_get_user_acceptances: [
+		tool.policy.get_user_acceptances.Params,
+		tool.policy.get_user_acceptances.Returns,
+	];
+	tool_policy_set_acceptances_status: [
+		tool.policy.set_acceptances_status.Params,
+		tool.policy.set_acceptances_status.Returns,
 	];
 	tool_templatelibrary_list_templates: [
 		tool.templatelibrary.list_templates.Params,

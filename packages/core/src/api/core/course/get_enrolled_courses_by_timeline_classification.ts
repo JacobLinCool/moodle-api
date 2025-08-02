@@ -1,3 +1,8 @@
+/**
+ * Array of the only field names that need to be returned. If empty, all fields will be returned.
+ */
+export type ParamsRequiredfields = (string | null)[];
+
 export interface Params {
 	/** future, inprogress, or past */
 	classification: string | null;
@@ -13,6 +18,8 @@ export interface Params {
 	customfieldvalue?: string | null;
 	/** The value a user wishes to search against */
 	searchvalue?: string | null;
+	/** Array of the only field names that need to be returned. If empty, all fields will be returned. */
+	requiredfields?: ParamsRequiredfields;
 }
 
 export interface ReturnsCoursesItem {
@@ -26,8 +33,8 @@ export interface ReturnsCoursesItem {
 	idnumber: string;
 	/** summary */
 	summary: string | null;
-	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
-	summaryformat: number | null;
+	/** summary format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
+	summaryformat?: number | null;
 	/** startdate */
 	startdate: number;
 	/** enddate */

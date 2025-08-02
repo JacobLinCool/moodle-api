@@ -132,8 +132,12 @@ export interface ReturnsResult {
 	canreview: boolean;
 	/** approvedeny */
 	approvedeny: boolean;
+	/** allowfiltering */
+	allowfiltering: boolean;
 	/** canmarkcomplete */
 	canmarkcomplete: boolean;
+	/** downloadlink */
+	downloadlink: string;
 }
 
 /**

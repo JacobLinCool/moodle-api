@@ -28,6 +28,8 @@ export interface ReturnsResourcesItemIntrofilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -55,6 +57,8 @@ export interface ReturnsResourcesItemContentfilesItem {
 	isexternalfile: boolean | null;
 	/** The repository type for external files. */
 	repositorytype: string | null;
+	/** The relative path to the relevant file type icon based on the file's mime type. */
+	icon: string | null;
 }
 
 /**
@@ -73,7 +77,7 @@ export interface ReturnsResourcesItem {
 	name: string | null;
 	/** Activity introduction */
 	intro: string | null;
-	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN */
+	/** intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN, or 4 = MARKDOWN) */
 	introformat: number | null;
 	/** Files in the introduction */
 	introfiles: ReturnsResourcesItemIntrofiles;
